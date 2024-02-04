@@ -1,0 +1,27 @@
+{
+  "name": "Oauth2 Trigger",
+  "description": "Triggers OAuth2 flow using the client on current page",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["alarms", "notifications", "storage", "tabs", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["*://*.okta.com/*"],
+    "js": ["content.js"]
+  }],
+  "action": {
+    "default_title": "Trigger Oauth2 flow",
+    "default_icon": {
+      "16": "icon.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "drink_water16.png",
+    "32": "drink_water32.png",
+    "48": "drink_water48.png",
+    "128": "drink_water128.png"
+  }
+}

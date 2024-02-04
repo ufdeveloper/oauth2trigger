@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trigger OAuth2 Flow</title>
+    <style>
+      body {
+        width: 400px;
+        height: 500px;
+        text-align: center;
+      }
+
+      button {
+        margin: 5px;
+        outline: none;
+      }
+
+      button:hover {
+        outline: #80deea dotted thick;
+      }
+
+      .row {
+        /*border: 2px solid red;*/
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      .short {
+        width: 80px;
+      }
+
+      .long {
+        width: 220px;
+      }
+
+      .block {
+        /*border: 5px solid green;*/
+        /*width: 150px;*/
+        display: inline-block;
+      }​
+    </style>
+    <!--
+      - JavaScript and HTML must be in separate files
+     -->
+  </head>
+  <body>
+  <div>
+    <!-- clientId -->
+    <div class="row">
+      <div class="block short">
+        <label>clientId</label>
+      </div>
+      <div class="block long">
+        <input id="clientId" class="long" value="1234" />
+      </div>
+    </div>
+
+    <!-- redirectUri -->
+    <div class="row">
+      <div class="block short">
+        <label>redirect URI</label>
+      </div>
+      <div class="block long">
+        <input id="redirectUri" class="long" value="www.redirect.com" />
+      </div>
+    </div>
+
+    <!-- clientSecret -->
+    <div class="row">
+      <div class="block short">
+        <label>client secret</label>
+      </div>
+      <div class="block long">
+        <input id="clientSecret" class="long" value="www.redirect.com" />
+      </div>
+    </div>
+
+    <!-- pkce challenge -->
+    <div class="row">
+      <div class="block short">
+        <label>pkce challenge</label>
+      </div>
+      <div class="block long">
+        <input id="pkceChallenge" class="long" value="www.redirect.com" />
+      </div>
+    </div>
+
+    <!-- pkce verifier -->
+    <div class="row">
+      <div class="block short">
+        <label>pkce verifier</label>
+      </div>
+      <div class="block long">
+        <input id="pkceVerifier" class="long" value="www.redirect.com" />
+      </div>
+    </div>
+
+    <button id="authorize">Authorize</button>
+    <button id="token">Redeem Code For Token</button>
+  </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
